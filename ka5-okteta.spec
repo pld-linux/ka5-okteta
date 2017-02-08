@@ -13,18 +13,37 @@ Source0:	http://download.kde.org/%{_state}/applications/%{version}/src/%{orgname
 # Source0-md5:	12cc48f3d3c04ee168c9c782a614a631
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Designer-devel
+BuildRequires:	Qt5Network-devel
+BuildRequires:	Qt5DBus-devel
 BuildRequires:	Qt5ScriptTools-devel
 BuildRequires:	Qt5UiTools-devel
 BuildRequires:	Qt5PrintSupport-devel
+BuildRequires:	Qt5Xml-devel
+BuildRequires:	kf5-kauth-devel
+BuildRequires:	kf5-kbookmarks-devel
+BuildRequires:	kf5-kcodecs-devel
+BuildRequires:	kf5-kcompletion-devel
+BuildRequires:	kf5-kconfig-devel
+BuildRequires:	kf5-kconfigwidgets-devel
+BuildRequires:	kf5-kcoreaddons-devel
+BuildRequires:	kf5-extra-cmake-modules
 BuildRequires:	kf5-kdbusaddons-devel
+BuildRequires:	kf5-kjobwidgets-devel
 BuildRequires:	kf5-kparts-devel
 BuildRequires:	kf5-knewstuff-devel
 BuildRequires:	kf5-kcmutils-devel
+BuildRequires:	kf5-ki18n-devel
 BuildRequires:	kf5-kiconthemes-devel
+BuildRequires:	kf5-kio-devel
+BuildRequires:	kf5-kitemviews-devel
 BuildRequires:	kf5-kdoctools-devel
+BuildRequires:	kf5-solid-devel
 BuildRequires:	kf5-ktextwidgets-devel
+BuildRequires:	kf5-kxmlgui-devel
 BuildRequires:	kf5-attica-devel
+BuildRequires:	kf5-kservice-devel
 BuildRequires:	kf5-sonnet-devel
+BuildRequires:	kf5-kwidgetsaddons-devel
 BuildRequires:	qca-qt5-devel
 BuildRequires:	rpmbuild(macros) >= 1.600
 BuildRequires:	shared-mime-info
