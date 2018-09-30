@@ -1,16 +1,15 @@
 %define		orgname		okteta
 %define		_state		stable
-%define		qtver		5.5.1
 
 Summary:	okteta - Binary file editor
 Summary(pl.UTF-8):	okteta - Edytor plików binarnych
 Name:		ka5-okteta
-Version:	16.12.1
+Version:	17.12.3
 Release:	1
 License:	GPL
 Group:		X11/Development/Tools
 Source0:	http://download.kde.org/%{_state}/applications/%{version}/src/%{orgname}-%{version}.tar.xz
-# Source0-md5:	e122c901b5b3348d4b9aed7f9386231c
+# Source0-md5:	780530d53715ef8d579d7262b7eb823c
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Designer-devel
 BuildRequires:	Qt5Network-devel
@@ -104,13 +103,15 @@ install -d $RPM_BUILD_ROOT
 
 rm -rf $RPM_BUILD_ROOT%{_iconsdir}/locolor
 
+%find_lang %{orgname} --all-name --with-kde
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %post	-p /sbin/ldconfig
 %postun	-p /sbin/ldconfig
 
-%files
+%files -f %{orgname}.lang
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/okteta
 %attr(755,root,root) %{_libdir}/qt5/plugins/oktetapart.so
@@ -130,11 +131,20 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libkasten3controllers.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libkasten3gui.so.?
 %attr(755,root,root) %{_libdir}/libkasten3gui.so.*.*.*
-%attr(755,root,root) %{_libdir}/qt5/plugins/designer/oktetadesignerplugin.so
+%attr(755,root,root) %{_libdir}/qt5/plugins/designer/oktetawidgets.so
 %{_desktopdir}/org.kde.okteta.desktop
-%{_datadir}/appdata/org.kde.okteta.appdata.xml
+%{_datadir}/metainfo/org.kde.okteta.appdata.xml
 %{_datadir}/config.kcfg/structviewpreferences.kcfg
-%{_docdir}/HTML/en/okteta
+%lang(de) %{_docdir}/HTML/de/okteta
+%lang(en) %{_docdir}/HTML/en/okteta
+%lang(es) %{_docdir}/HTML/es/okteta
+%lang(it) %{_docdir}/HTML/it/okteta
+%lang(nl) %{_docdir}/HTML/nl/okteta
+%lang(pt) %{_docdir}/HTML/pt/okteta
+%lang(pt_BR) %{_docdir}/HTML/pt_BR/okteta
+%lang(sr) %{_docdir}/HTML/sr/okteta
+%lang(sv) %{_docdir}/HTML/sv/okteta
+%lang(uk) %{_docdir}/HTML/uk/okteta
 %dir %{_datadir}/kxmlgui5/oktetapart
 %{_datadir}/kxmlgui5/oktetapart/oktetapartbrowserui.rc
 %{_datadir}/kxmlgui5/oktetapart/oktetapartreadonlyui.rc
