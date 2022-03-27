@@ -5,13 +5,13 @@
 Summary:	okteta - Binary file editor
 Summary(pl.UTF-8):	okteta - Edytor plików binarnych
 Name:		ka5-okteta
-Version:	0.26.6
+Version:	0.26.7
 Release:	1
 Epoch:		1
 License:	GPL
 Group:		X11/Development/Tools
 Source0:	http://download.kde.org/%{_state}/%{orgname}/%{version}/src/%{orgname}-%{version}.tar.xz
-# Source0-md5:	5c6808ae1dcf7718e5e44c6bc0efa344
+# Source0-md5:	ee072bf945363e088dba81561567e51e
 URL:		http://www.kde.org/
 BuildRequires:	Qt5DBus-devel
 BuildRequires:	Qt5Designer-devel
@@ -127,6 +127,7 @@ rm -rf $RPM_BUILD_ROOT
 %lang(pt) %{_docdir}/HTML/pt/okteta
 %lang(pt_BR) %{_docdir}/HTML/pt_BR/okteta
 %lang(sr) %{_docdir}/HTML/sr/okteta
+%lang(sr@latin) %{_docdir}/HTML/sr@latin/okteta
 %lang(sv) %{_docdir}/HTML/sv/okteta
 %lang(uk) %{_docdir}/HTML/uk/okteta
 %{_datadir}/okteta
